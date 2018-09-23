@@ -32,6 +32,13 @@ class LinkedIn:
             url = '%s:(%s)' % (url, ','.join(fields))
         return self.make_request(url)
 
+    def check_company_share(self, id):
+        url = '%s/%s/%s?' % (self.COMPANY, str(id), 'is-company-share-enabled')
+        return self.make_request(url)
+
+    def get_my_companies(self):
+        return self.make_request(self.COMPANY, params={'is-company-admin':'true'})
+
     def get_company_id(self, id, fields=None):
         url = '%s/%s' % (self.COMPANY, str(id))
         if fields:
@@ -46,3 +53,11 @@ class LinkedIn:
         url = '%s/%s/updates' % (self.COMPANY, str(id))
         params = {'count':count}
         return self.make_request(url, params=params)
+
+    def get_company_update_key(self, id, key):
+        url = '%s/%s/updates/key=%s' % (self.COMPANY, str(id), key)
+        return self.make_request(url)
+
+    def get_company_update_likes(self, id, key):
+        url = '%s/%s/updates/key=%s/likes' % (self.COMPANY, str(id), key)
+        return self.make_request(url)
