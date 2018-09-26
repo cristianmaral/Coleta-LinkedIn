@@ -14,6 +14,9 @@ Para que os métodos que serão explicados ao longo deste documento possam ser u
 ## Observações importantes
   * Todas as requisições à API oficial que são realizadas por esta biblioteca utiliza como um parâmetro adicional o formato em que os resultados devem ser obtidos. Em prol de uma maior legibilidade das informações, **json** foi o formato escolhido.
   * Nenhum método de requisição **POST** foi implementado devido ao objetivo do projeto, que é voltado apenas para a coleta de dados e não para o compartilhamento automatizado de informações/comentários.
+  * A biblioteca e os exemplos de utilização foram desenvolvidos utilizando a linguagem de programação Python na versão 2.7.
+  * O desenvolvimento e os testes foram realizados em um sistema operacional Linux, logo não há a garantia que este projeto seja compatível com outros sistemas operacionais.
+  * Este projeto pode ser utilizado, compartilhado e adaptado para fins específicos livre e gratuitamente.
 
 ## Profile API
 Mais informações em https://developer.linkedin.com/docs/guide/v2/people/profile-api
@@ -97,4 +100,4 @@ Company Name: DevTestCo
 
 Company URL: https://www.linkedin.com/company/devtestco
 
-Company ID: 2414183 
+Company ID: 2414183
